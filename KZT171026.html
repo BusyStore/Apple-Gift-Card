@@ -47,6 +47,24 @@
       margin: 0 0 20px 0;
     }
     
+    /* Card Image Section */
+    .apple-card-box {
+      background-color: #f8fafc;
+      border: 1px solid #f1f5f9;
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .apple-logo-img {
+      width: 100%;
+      max-width: 140px;
+      height: auto;
+      object-fit: contain;
+    }
+
     /* Input Section Styles */
     .input-box {
       width: 100%;
@@ -68,24 +86,6 @@
       font-weight: 600;
       font-size: 15px;
       cursor: pointer;
-    }
-
-    /* Card Image Section */
-    .apple-card-box {
-      background-color: #f8fafc;
-      border: 1px solid #f1f5f9;
-      border-radius: 20px;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 24px;
-    }
-    .apple-logo-img {
-      width: 100%;
-      max-width: 140px;
-      height: auto;
-      object-fit: contain;
     }
 
     /* Details Box Section */
@@ -137,29 +137,35 @@
 <body>
 
 <div class="card-container">
-  <!-- Busy Store Logo (Class နာမည် ပြင်ထားသည်) -->
+  <!-- Busy Store Logo -->
   <img src="busystore.png" alt="Busy Store Logo" class="store-logo">
 
-  <!-- Password Locked View -->
+  <!-- Password Locked View (Lock Screen) -->
   <div id="lock-section">
     <h1 class="title">APPLE GIFT CARD</h1>
     <p class="amount">$2.00 USD</p>
+
+    <!-- Apple Card Logo (Lock Screen ပေါ်တွင် ပေါ်စေရန်) -->
+    <div class="apple-card-box">
+      <img src="applegc.png" alt="Apple Logo" class="apple-logo-img">
+    </div>
+
     <input type="password" id="passInput" class="input-box" placeholder="Enter Password">
     <button onclick="checkPassword()" class="btn">Unlock Card</button>
     <p id="error-msg" style="color: #ef4444; font-size: 13px; display: none; margin-top: 10px;">Password မှားယွင်းနေပါသည်။</p>
   </div>
 
-  <!-- Unlocked View -->
+  <!-- Unlocked View (Password ရိုက်ပြီးသည့်အချိန်) -->
   <div id="card-section" class="hidden">
     <h1 class="title">APPLE GIFT CARD</h1>
     <p class="amount">$2.00 USD</p>
 
-    <!-- Apple Card Logo Box -->
+    <!-- Apple Card Logo (Unlocked View ပေါ်တွင် ပေါ်စေရန်) -->
     <div class="apple-card-box">
       <img src="applegc.png" alt="Apple Logo" class="apple-logo-img">
     </div>
 
-    <!-- Details Box -->
+    <!-- Gift Card Details Box -->
     <div class="details-box">
       <p class="details-title">GIFT CARD DETAILS</p>
       <div class="code-field">
@@ -190,3 +196,4 @@
 
 </body>
 </html>
+
